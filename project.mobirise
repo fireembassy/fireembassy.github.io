@@ -1,6 +1,6 @@
 {
   "settings": {
-    "currentPage": "index.html",
+    "currentPage": "page9.html",
     "theme": {
       "name": "businessm4",
       "title": "BusinessM4",
@@ -46,7 +46,7 @@
         "url": "https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
       }
     ],
-    "uniqCompNum": 89,
+    "uniqCompNum": 91,
     "versionPublish": "4.12.3",
     "mcShopcart": {
       "email": "Sahrsylvesteryongai@gmail.com",
@@ -59,7 +59,8 @@
       "counterSize": "12",
       "counterColor": "#FFFFFF",
       "counterBack": "#F97352",
-      "checkoutButton": "DONATE"
+      "checkoutButton": "DONATE",
+      "currency": "USD"
     },
     "screenshot": "screenshot.png",
     "favicon": "@PROJECT_PATH@/assets/images/57176915-279654119604764-5308867138801369088-o-128x128-1.png",
@@ -6646,67 +6647,30 @@
         {
           "alias": false,
           "_styles": {
-            "overflow": "hidden !important",
             "& when not (@fullScreen)": {
               "padding-top": "(@paddingTop * 15px)",
               "padding-bottom": "(@paddingBottom * 15px)"
             },
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
             "& when (@bg-type = 'image')": {
               "background-image": "url(@bg-value)"
             },
-            ".container-fluid": {
-              "padding": "0 5rem"
+            "& when (@bg-type = 'color')": {
+              "background": "linear-gradient(90deg, @bg-value, @bgColor2)"
             },
-            ".img-block": {
-              "-webkit-align-self": "center",
-              "align-self": "center"
-            },
-            ".mbr-section-title": {
-              "padding-bottom": "2rem",
-              "color": "#3e4555"
+            ".mbr-overlay": {
+              "background": "@overlayColor",
+              "& when (@gradientOverlay)": {
+                "background": "linear-gradient(90deg, @overlayColor, @overlayColor2)"
+              }
             },
             ".mbr-section-subtitle": {
-              "color": "#3e4555",
-              "font-weight": "400"
-            },
-            ".mbr-figure": {
-              "border-radius": ".25rem",
-              "overflow": "hidden"
-            },
-            "@media (max-width: 1199px)": {
-              ".mbr-figure img": {
-                "width": "100%"
-              }
-            },
-            "@media (max-width: 991px)": {
-              ".container-fluid": {
-                "padding": "0 1rem"
-              },
-              ".mbr-figure": {
-                "margin-top": "1rem"
-              },
-              ".mbr-section-title": {
-                "text-align": "center !important"
-              },
-              ".mbr-section-subtitle": {
-                "text-align": "center !important"
-              },
-              ".mbr-section-btn": {
-                "text-align": "center !important"
-              }
+              "color": "#e3e3e3"
             }
           },
-          "_name": "header2",
-          "_customHTML": "<section class=\"header2\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"8\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Media\" name=\"showMedia\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" value=\"../_images/background1.jpg\" title=\"Background Image\" parallax>\n            <input type=\"color\" value=\"#cfeef1\" title=\"Background Color\" selected>\n            <input type=\"video\" value=\"https://youtu.be/iM-NestDPNQ\" title=\"Background Video\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#cfeef1\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters><div class=\"powr-donation-form\" id=\"3a4fbcde_1585612833\"></div>[JS_CODE_0]\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"row align-items-center\" mbr-class=\"{'justify-content-center': !showMedia}\">\n            <div class=\"mbr-white\" mbr-class=\"{'col-lg-6': showMedia,\n                             'col-lg-8': !showMedia}\">\n                <h1 class=\"mbr-section-title mbr-white mbr-fonts-style align-left\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Donate Now</h1>\n                <h3 class=\"mbr-section-subtitle pb-3 mbr-fonts-style mbr-white align-left\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle,.mbr-section-btn\">Giving sets us free, while hoarding entraps us (James 5:2). Giving changes the lives of others (John 3:16). Giving brings blessing back to us (Luke 6:38). Giving allows us to store up treasures in Heaven rather than here on the earth (Matthew 19:21).</h3>\n                <div mbr-buttons mbr-theme-style=\"display-4\" mbr-class=\"{'pt-3': !showSubtitle}\" data-toolbar=\"-mbrBtnMove\" mbr-if=\"showButtons\" class=\"mbr-section-btn\">\n                    <a class=\"btn-primary btn btn-md\" type=\"submit\">DOWNLOAD NOW</a>\n                    <a class=\"btn-success btn btn-md\" type=\"submit\">CHECK FEATURES</a>\n                </div>\n            </div>\n            <div class=\"col-lg-6 align-left img-block\" mbr-if=\"showMedia\">\n                <div class=\"mbr-figure\">\n                    <img src=\"@PROJECT_PATH@/assets/images/89354311-195500648374300-647278062865481728-n-960x678.jpg\" alt=\"Mobirise\" title>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "rULe0MTqsG",
-          "_anchor": "header2-1v",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": [
-            "<script src=\"https://www.powr.io/powr.js?platform=embed\"></script>"
-          ],
+          "_name": "header6",
+          "_customHTML": "<section class=\"header6\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n         'mbr-fullscreen': fullScreen,\n         'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"1\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/mbr-2-676x451.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#04367c\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://youtu.be/iM-NestDPNQ\">\n        </fieldset>\n        <input type=\"color\" name=\"bgColor2\" title=\"Color 2\" value=\"#6e4808\" condition=\"bg.type=='color'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#2bdc9d\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"checkbox\" title=\"Gradient Overlay\" name=\"gradientOverlay\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color 2\" name=\"overlayColor2\" value=\"#1dc9cb\" condition=\"overlay && bg.type !== 'color'&&gradientOverlay\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" mbr-style=\"{'opacity': overlayOpacity}\">\n    </div>\n\n    <div class=\"container align-left\">\n        <div class=\"row justify-content-center\">\n            <div class=\"media-container-column mbr-white col-md-10\">\n                <h1 class=\"mbr-section-title align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">DONATE NOW&nbsp;</h1>\n                <h3 class=\"mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle,.mbr-section-btn\">\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, eveniet, magni possimus reiciendis.\n                </h3>\n                <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn align-center pt-3\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n                    <a class=\"btn btn-md btn-white\" href=\"https://mobirise.com\">Learn More</a>\n                    <a class=\"btn btn-md btn-white-outline\" href=\"https://mobirise.com\">View All</a>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div mbr-if=\"showArrow && fullScreen\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
+          "_cid": "rWF8Kjkv6x",
+          "_anchor": "header6-2i",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
@@ -6771,148 +6735,12 @@
                 "display": "inline-block"
               }
             },
-            ".mbr-section-title,.underline": {
-              "color": "#53081b"
-            }
-          },
-          "_customHTML": "<section group=\"Info info4\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Underline\" name=\"showUnderline\" checked condition=\"showTitle\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Gray Filter\" name=\"grayFilter\">\n        <input type=\"checkbox\" title=\"Visa\" name=\"showVisa\" checked>\n        <input type=\"checkbox\" title=\"Master Card\" name=\"showMasterCard\" checked>\n        <input type=\"checkbox\" title=\"American Express\" name=\"showAmericanExpress\" checked>\n        <input type=\"checkbox\" title=\"Pay Pal\" name=\"showPayPal\" checked>\n        <input type=\"checkbox\" title=\"Diners Club\" name=\"showDinersClub\">\n        <input type=\"checkbox\" title=\"Discover\" name=\"showDiscover\">\n        <input type=\"checkbox\" title=\"Bitcoin\" name=\"showBitcoin\">\n        <input type=\"checkbox\" title=\"Western Union\" name=\"showWesternUnion\" checked>\n        <input type=\"checkbox\" title=\"JCB\" name=\"showJcb\">\n        <input type=\"checkbox\" title=\"Stripe\" name=\"showStripe\">\n        <input type=\"checkbox\" title=\"Amazon\" name=\"showAmazon\">\n        <input type=\"checkbox\" title=\"Ebay\" name=\"showEbay\">\n        <input type=\"checkbox\" title=\"Union Pay\" name=\"showUnionPay\" checked>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/04.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=kI1YE_qenSU\">\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container-fluid\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-12\" mbr-if=\"showTitle || showSubtitle\">\n                <h2 class=\"align-center mbr-fonts-style mbr-section-title\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title,.underline\">\n                    <br>SUPPORTED PAYMENT SYSTEM\n                </h2>\n                <div class=\"underline align-center\" mbr-if=\"showUnderline && showTitle\">\n                    <div class=\"line\"></div>\n                </div>\n                <h3 class=\"mbr-section-subtitle mbr-fonts-style pt-3 mbr-light align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-class=\"{'pb-5':!showTitle}\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis pulvinar vestibulum. Doneceleifend, sem sed dictum.</h3>\n            </div>\n\n            <div class=\"row justify-content-center col-12 col-md-12 col-lg-10 col-xl-8\" mbr-class=\"{'pt-5':showTitle}\">\n                <ul class=\"list-inline align-center\">\n                    <li class=\"list-inline-item\" mbr-if=\"showVisa\">\n                        <img src=\"@PROJECT_PATH@/assets/images/visa.png\" alt=\"Visa\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showMasterCard\">\n                        <img src=\"@PROJECT_PATH@/assets/images/master-card.png\" alt=\"Master Card\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showAmericanExpress\">\n                        <img src=\"@PROJECT_PATH@/assets/images/american-express.png\" alt=\"American Express\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showPayPal\">\n                        <img src=\"@PROJECT_PATH@/assets/images/paypal.png\" alt=\"Pay Pal\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showDinersClub\">\n                        <img src=\"@PROJECT_PATH@/assets/images/diners-club.png\" alt=\"Diners Club\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showDiscover\">\n                        <img src=\"@PROJECT_PATH@/assets/images/discover.png\" alt=\"Discover\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showBitcoin\">\n                        <img src=\"@PROJECT_PATH@/assets/images/bitcoin.png\" alt=\"Bitcoin\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showWesternUnion\">\n                        <img src=\"@PROJECT_PATH@/assets/images/western-union.png\" alt=\"Western Union\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showJcb\">\n                        <img src=\"@PROJECT_PATH@/assets/images/jcb.png\" alt=\"JCB\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showStripe\">\n                        <img src=\"@PROJECT_PATH@/assets/images/stripe.png\" alt=\"Stripe\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showAmazon\">\n                        <img src=\"@PROJECT_PATH@/assets/images/amazon.png\" alt=\"Amazon\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showEbay\">\n                        <img src=\"@PROJECT_PATH@/assets/images/12846a53693e484b68a3c-192x108.png\" alt=\"Ebay\" title>\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showUnionPay\">\n                        <img src=\"@PROJECT_PATH@/assets/images/1200x630wa-192x101.png\" alt=\"Union Pay\" title>\n                    </li>\n\n                </ul>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_anchor": "info4-1w",
-          "_isUserblock": true,
-          "_sourceTheme": "storem4",
-          "_cid": "rULeuuRz8T",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": [],
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "background-color": "@bgColor"
-          },
-          "_name": "content2",
-          "_customHTML": "<section class=\"mbr-section content8\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"color\" title=\"Backgroud Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row title\">\n            <div class=\"col-md-10 col-lg-8\">\n                <div class=\"mbr-section-btn align-center\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-primary btn-md\" href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_cart&amount=1.0&item_name=Custom+Item&currency_code=USD\" data-app-placeholder=\"Type Text\">DONATE NOW&nbsp;</a></div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_anchor": "content2-20",
-          "_isUserblock": true,
-          "_sourceTheme": "businessm4",
-          "_cid": "rULxgUJSQY",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value",
-              "& when (@gradientBg)": {
-                "background": "linear-gradient(45deg, @bg-value, @color2)"
-              }
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
             ".mbr-section-subtitle": {
-              "color": "#767676"
-            },
-            ".btn": {
-              "margin": "0 0 .5rem 0"
-            },
-            "& when (@reverseContent)": {
-              ".content-row": {
-                "-webkit-flex-direction": "row-reverse",
-                "flex-direction": "row-reverse"
-              },
-              ".mbr-section-btn": {
-                "text-align": "left"
-              }
-            },
-            "@media (max-width: 768px)": {
-              "h2,h3": {
-                "text-align": "center !important"
-              },
-              ".mbr-section-btn": {
-                "text-align": "center !important"
-              }
+              "text-align": "center",
+              "color": "#333333"
             }
           },
-          "_name": "info3",
-          "_customHTML": "<section class=\"mbr-section info3\" group=\"Call To Action\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n        <input type=\"checkbox\" title=\"Text on left/right\" name=\"reverseContent\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://youtu.be/iM-NestDPNQ\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Gradient Bg\" name=\"gradientBg\" condition=\"bg.type=='color'\" checked>\n        <input type=\"color\" name=\"color2\" title=\"Color 2\" value=\"#2bdc9d\" condition=\"bg.type=='color' && gradientBg\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#188ef4\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"row justify-content-center content-row\">\n            <div class=\"media-container-column title col-12 col-lg-7 col-md-6\">\n                <h2 mbr-if=\"showTitle\" class=\"align-left mbr-bold mbr-fonts-style pb-3\" mbr-theme-style=\"display-2\">You can also Donate with CASH APP</h2>\n                <h3 mbr-if=\"showSubtitle\" class=\"mbr-section-subtitle align-left mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\">\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore tempore maxime id, dicta ex.\n                </h3>\n            </div>\n            <div class=\"media-container-column col-12 col-lg-3 col-md-4\">\n                <div class=\"mbr-section-btn align-right py-4\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-2\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-md btn-warning\" href=\"page9.html\" data-app-placeholder=\"Type Text\">$fireembassy</a></div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "rULxAxpDiK",
-          "_anchor": "info3-21",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "_name": "info4",
-          "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            ".container-fluid": {
-              "padding": "0 3rem"
-            },
-            "ul.list-inline": {
-              "margin": "0",
-              "-webkit-align-self": "center",
-              "align-self": "center",
-              "li": {
-                "margin": "0",
-                "padding": ".5rem"
-              },
-              "img": {
-                "max-width": "6rem",
-                "padding-bottom": ".5rem",
-                "& when (@grayFilter)": {
-                  "-webkit-filter": "grayscale(100%)",
-                  "-moz-filter": "grayscale(100%)",
-                  "-ms-filter": "grayscale(100%)",
-                  "-o-filter": "grayscale(100%)",
-                  "filter": "gray"
-                },
-                "&:hover": {
-                  "-webkit-filter": "none",
-                  "-moz-filter": "none",
-                  "-ms-filter": "none",
-                  "-o-filter": "none",
-                  "filter": "none"
-                }
-              }
-            },
-            "@media (max-width: 767px)": {
-              ".container-fluid": {
-                "padding": "0 1rem"
-              },
-              ".list-inline-item img": {
-                "max-width": "5rem"
-              }
-            },
-            ".underline": {
-              "padding-top": ".5rem",
-              "padding-bottom": ".5rem",
-              ".line": {
-                "width": "5rem",
-                "height": "3px",
-                "background": "linear-gradient(90deg, @primaryColor, @secondaryColor)",
-                "display": "inline-block"
-              }
-            }
-          },
-          "_customHTML": "<section group=\"Info info4\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Show Underline\" name=\"showUnderline\" checked condition=\"showTitle\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Gray Filter\" name=\"grayFilter\">\n        <input type=\"checkbox\" title=\"Visa\" name=\"showVisa\">\n        <input type=\"checkbox\" title=\"Master Card\" name=\"showMasterCard\">\n        <input type=\"checkbox\" title=\"American Express\" name=\"showAmericanExpress\">\n        <input type=\"checkbox\" title=\"Pay Pal\" name=\"showPayPal\">\n        <input type=\"checkbox\" title=\"Diners Club\" name=\"showDinersClub\">\n        <input type=\"checkbox\" title=\"Discover\" name=\"showDiscover\">\n        <input type=\"checkbox\" title=\"Bitcoin\" name=\"showBitcoin\">\n        <input type=\"checkbox\" title=\"Western Union\" name=\"showWesternUnion\">\n        <input type=\"checkbox\" title=\"JCB\" name=\"showJcb\">\n        <input type=\"checkbox\" title=\"Stripe\" name=\"showStripe\">\n        <input type=\"checkbox\" title=\"Amazon\" name=\"showAmazon\">\n        <input type=\"checkbox\" title=\"Ebay\" name=\"showEbay\" checked>\n        <input type=\"checkbox\" title=\"Union Pay\" name=\"showUnionPay\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/04.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=kI1YE_qenSU\">\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container-fluid\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-12\" mbr-if=\"showTitle || showSubtitle\">\n                <h2 class=\"align-center mbr-fonts-style mbr-section-title\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title,.underline\">\n                    SUPPORTED PAYMENT SYSTEM\n                </h2>\n                <div class=\"underline align-center\" mbr-if=\"showUnderline && showTitle\">\n                    <div class=\"line\"></div>\n                </div>\n                <h3 class=\"mbr-section-subtitle mbr-fonts-style pt-3 mbr-light align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-class=\"{'pb-5':!showTitle}\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis pulvinar vestibulum. Doneceleifend, sem sed dictum.</h3>\n            </div>\n\n            <div class=\"row justify-content-center col-12 col-md-12 col-lg-10 col-xl-8\" mbr-class=\"{'pt-5':showTitle}\">\n                <ul class=\"list-inline align-center\">\n                    <li class=\"list-inline-item\" mbr-if=\"showVisa\">\n                        <img src=\"@PROJECT_PATH@/assets/images/visa.png\" alt=\"Visa\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showMasterCard\">\n                        <img src=\"@PROJECT_PATH@/assets/images/master-card.png\" alt=\"Master Card\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showAmericanExpress\">\n                        <img src=\"@PROJECT_PATH@/assets/images/american-express.png\" alt=\"American Express\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showPayPal\">\n                        <img src=\"@PROJECT_PATH@/assets/images/paypal.png\" alt=\"Pay Pal\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showDinersClub\">\n                        <img src=\"@PROJECT_PATH@/assets/images/diners-club.png\" alt=\"Diners Club\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showDiscover\">\n                        <img src=\"@PROJECT_PATH@/assets/images/discover.png\" alt=\"Discover\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showBitcoin\">\n                        <img src=\"@PROJECT_PATH@/assets/images/bitcoin.png\" alt=\"Bitcoin\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showWesternUnion\">\n                        <img src=\"@PROJECT_PATH@/assets/images/western-union.png\" alt=\"Western Union\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showJcb\">\n                        <img src=\"@PROJECT_PATH@/assets/images/jcb.png\" alt=\"JCB\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showStripe\">\n                        <img src=\"@PROJECT_PATH@/assets/images/stripe.png\" alt=\"Stripe\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showAmazon\">\n                        <img src=\"@PROJECT_PATH@/assets/images/amazon.png\" alt=\"Amazon\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showEbay\">\n                        <img src=\"@PROJECT_PATH@/assets/images/12846a53693e484b68a3c-192x108.png\" alt=\"Ebay\" title>\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showUnionPay\">\n                        <img src=\"@PROJECT_PATH@/assets/images/1200x630wa-192x101.png\" alt=\"Union Pay\" title>\n                    </li>\n\n                </ul>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section group=\"Info info4\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Underline\" name=\"showUnderline\" checked condition=\"showTitle\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Gray Filter\" name=\"grayFilter\">\n        <input type=\"checkbox\" title=\"Visa\" name=\"showVisa\" checked>\n        <input type=\"checkbox\" title=\"Master Card\" name=\"showMasterCard\">\n        <input type=\"checkbox\" title=\"American Express\" name=\"showAmericanExpress\">\n        <input type=\"checkbox\" title=\"Pay Pal\" name=\"showPayPal\" checked>\n        <input type=\"checkbox\" title=\"Diners Club\" name=\"showDinersClub\">\n        <input type=\"checkbox\" title=\"Discover\" name=\"showDiscover\">\n        <input type=\"checkbox\" title=\"Bitcoin\" name=\"showBitcoin\">\n        <input type=\"checkbox\" title=\"Western Union\" name=\"showWesternUnion\">\n        <input type=\"checkbox\" title=\"JCB\" name=\"showJcb\">\n        <input type=\"checkbox\" title=\"Stripe\" name=\"showStripe\">\n        <input type=\"checkbox\" title=\"Amazon\" name=\"showAmazon\">\n        <input type=\"checkbox\" title=\"Ebay\" name=\"showEbay\" checked>\n        <input type=\"checkbox\" title=\"Union Pay\" name=\"showUnionPay\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/mbr-676x426.jpg\" selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=kI1YE_qenSU\">\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container-fluid\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-12\" mbr-if=\"showTitle || showSubtitle\">\n                <h2 class=\"align-center mbr-fonts-style mbr-section-title\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title,.underline\">3 WAYS &nbsp;</h2>\n                <div class=\"underline align-center\" mbr-if=\"showUnderline && showTitle\">\n                    <div class=\"line\"></div>\n                </div>\n                <h3 class=\"mbr-section-subtitle mbr-fonts-style pt-3 mbr-light align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-class=\"{'pb-5':!showTitle}\"><b>Cash app: $fireembassy</b><br><b>\n</b><div><b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&item-name=Custom+Item&item-number=0.00&currency_code=USD\">PayPal: sahrsylvesteryongai@gmail.com\n</a></b></div><br><div><b style=\"font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit; color: inherit;\">Zelle: 7632226496</b></div><br><div><b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</b> &nbsp; &nbsp; Giving sets us free, while hoarding entraps us (James 5:2).</div><div>Giving changes the lives of others (John 3:16). </div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Giving brings blessing back to us (Luke 6:38). &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</div></h3>\n            </div>\n\n            <div class=\"row justify-content-center col-12 col-md-12 col-lg-10 col-xl-8\" mbr-class=\"{'pt-5':showTitle}\">\n                <ul class=\"list-inline align-center\">\n                    <li class=\"list-inline-item\" mbr-if=\"showVisa\">\n                        <a href=\"tel:7632226496\"><img src=\"@PROJECT_PATH@/assets/images/1200x630wa-192x101.png\" alt=\"Visa\" title></a>\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showMasterCard\">\n                        <img src=\"@PROJECT_PATH@/assets/images/master-card.png\" alt=\"Master Card\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showAmericanExpress\">\n                        <img src=\"@PROJECT_PATH@/assets/images/american-express.png\" alt=\"American Express\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showPayPal\">\n                        <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&item-name=Custom+Item&item-number=0.00&currency_code=USD\"><img src=\"@PROJECT_PATH@/assets/images/paypal.png\" alt=\"Pay Pal\" title></a>\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showDinersClub\">\n                        <img src=\"@PROJECT_PATH@/assets/images/diners-club.png\" alt=\"Diners Club\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showDiscover\">\n                        <img src=\"@PROJECT_PATH@/assets/images/discover.png\" alt=\"Discover\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showBitcoin\">\n                        <img src=\"@PROJECT_PATH@/assets/images/bitcoin.png\" alt=\"Bitcoin\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showWesternUnion\">\n                        <img src=\"@PROJECT_PATH@/assets/images/western-union.png\" alt=\"Western Union\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showJcb\">\n                        <img src=\"@PROJECT_PATH@/assets/images/jcb.png\" alt=\"JCB\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showStripe\">\n                        <img src=\"@PROJECT_PATH@/assets/images/stripe.png\" alt=\"Stripe\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showAmazon\">\n                        <img src=\"@PROJECT_PATH@/assets/images/amazon.png\" alt=\"Amazon\">\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showEbay\">\n                        <img src=\"@PROJECT_PATH@/assets/images/12846a53693e484b68a3c-192x108.png\" alt=\"Ebay\" title>\n                    </li>\n                    <li class=\"list-inline-item\" mbr-if=\"showUnionPay\">\n                        <img src=\"@PROJECT_PATH@/assets/images/1200x630wa-192x101.png\" alt=\"Union Pay\" title>\n                    </li>\n\n                </ul>\n            </div>\n        </div>\n    </div>\n</section>",
           "_anchor": "info4-1z",
           "_isUserblock": true,
           "_sourceTheme": "storem4",
